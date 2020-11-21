@@ -1,0 +1,12 @@
+version: '3.0'
+services:
+  auth-service:
+    image: 13091999/auth-test-docker-k8s-api-auths-healthz:1.0.0
+    build:
+      context: .
+      dockerfile: ./Auth/Dockerfile
+  todoitem-service:
+    image: 13091999/todoapi-test-docker-k8s-api-todoitems-healthz:1.0.0
+    build:
+      context: .
+      dockerfile: ./TodoApi/Dockerfile
